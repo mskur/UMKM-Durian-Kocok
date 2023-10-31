@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) 2019 - 2022, CodeIgniter Foundation
+Copyright (c), Imam Maskuri (20081010074)
+program ini dibuat untuk memenuhi tugas manajeemen proyek
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
