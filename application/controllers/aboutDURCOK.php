@@ -17,4 +17,5 @@ class aboutDURCOK extends CI_Controller {
         );
         $this->load->view('Admin/viewAbout', $data);
     }
+    
 }
