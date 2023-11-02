@@ -20,5 +20,5 @@
 			<li>modelProduct</li>
 		</ul>
 	<li>Views</li>
-	Dikerjakan oleh bagian front end !!
+	Dikerjakan oleh bagian front end oleh mahendra wisnu wardana !!
 </ol>
