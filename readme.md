@@ -2,6 +2,7 @@
 
 <h2>PROGRES PENGERJAAN</h2>
 <ol>
+	<li>Routes</li>
 	<li>Controller</li>
 		<ul>
 			<li>homeDURCOK</li>
