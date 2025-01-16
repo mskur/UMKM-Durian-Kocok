@@ -49,25 +49,35 @@ class LoginDURCOK extends CI_Controller {
         }
     }
 
-    public function dashboardDurianKocok()
+       public function dashboardDurianKocok()
     {
         $this->modelLogin->protectVerifyLoginAdminController();
 
         #getAllModel
         $this->load->model('modelProduct');
         $this->load->model('modelContact');
+        $this->load->model('modelPesanan');
+        $this->load->model('modelAdmin');
 
         $getAllProduct = $this->modelProduct->getAllProduct();
         $getContact = $this->modelContact->getContactbyID(1);
+        $getAllPesanan = $this->modelPesanan->getAllPesanan();
+        $getAllAdmin = $this->modelAdmin->getAllAdmin();
+        $getMonthlyOrders = $this->modelPesanan->getMonthlyOrders();
 
         $data = array(
             'title' => 'Dashboard',
             'getAllProduct' => $getAllProduct,
             'countProduct' => count($getAllProduct),
-            'getContact' => $getContact
+            'getContact' => $getContact,
+            'countContact' => is_countable($getContact) ? count($getContact) : 1,
+            'countPesanan' => count($getAllPesanan),
+            'countAdmin' => count($getAllAdmin),
+            'monthlyOrders' => $getMonthlyOrders
         );
         $this->load->view('Admin/viewDashboard', $data);
     }
+
 
     public function logout()
     {

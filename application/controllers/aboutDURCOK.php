@@ -7,13 +7,16 @@ class aboutDURCOK extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('modelLogin');
+        $this->load->model('modelContact');
         $this->modelLogin->protectVerifyLoginAdminController();
     }
 
     public function aboutDurianKocok()
     {
+        $allContact = $this->modelContact->getContactbyID(1);
         $data = array(
             'title' => 'About Durian Kocok',
+            'contact' => $allContact
         );
         $this->load->view('Admin/viewAbout', $data);
     }

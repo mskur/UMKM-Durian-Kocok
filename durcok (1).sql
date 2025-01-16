@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2023 at 09:06 AM
+-- Generation Time: Dec 20, 2023 at 12:15 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -60,7 +60,7 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`idContact`, `alamatWebsite`, `nomorTelepon`, `alamatLengkap`, `alamatLive`) VALUES
-(1, '123', '086675543321', 'kwjqldjlkdjalksdnalsd', 'https://maps.app.goo.gl/QfQr8TJ6DtjHxh1fA');
+(1, '123', '086675543321', 'kwjqldjlkdjalksdnalsd', 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15826.80120191226!2d112.5602686!3d-7.3874426!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780951cfadc451:0xefcff0ec812392ab!2sSop buah irine!5e0!3m2!1sid!2sid!4v1702898612450!5m2!1sid!2sid');
 
 -- --------------------------------------------------------
 
@@ -91,10 +91,11 @@ INSERT INTO `pesanan` (`idPesanan`, `namaPemesan`, `alamatPemesan`, `deskripsiPe
 (5, 'Imam', '123', '123', '098876654432', '2023-09-25 00:45:06', NULL, 'mahendra'),
 (6, 'novi', 'sby', '1111111111111111111111', '081231803171', '2023-09-26 01:50:14', '1', 'admin'),
 (7, '5', '5', '5', '5', '2023-10-03 06:47:29', '1', 'admin'),
-(8, 'Zaimtod', '11w1', 'wqe12ee', '081231803171', '2023-10-03 07:01:47', NULL, NULL),
-(9, 'zaim', 'zaim', 'zaim', '+6281231803171', '2023-10-03 07:03:13', NULL, NULL),
-(10, 'Zaim', 'Kontol', 'Kontolll', '6281231803171', '2023-10-03 07:04:10', NULL, NULL),
-(11, 'Mahendra', 'qs', 'Kontol Ngakak', '628983627088', '2023-10-03 07:05:32', NULL, NULL);
+(8, 'Zaimtod', '11w1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at nunc sed lectus eleifend interdum at eget mauris. Nullam imperdiet tortor vitae nisl sagittis, eu placerat lorem tristique. ', '081231803171', '2023-10-03 07:01:47', NULL, NULL),
+(9, 'zaim', 'zaim', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at nunc sed lectus eleifend interdum at eget mauris. Nullam imperdiet tortor vitae nisl sagittis, eu placerat lorem tristique. ', '+6281231803171', '2023-10-03 07:03:13', NULL, NULL),
+(10, 'Zaim', 'test', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at nunc sed lectus eleifend interdum at eget mauris. Nullam imperdiet tortor vitae nisl sagittis, eu placerat lorem tristique. ', '6281231803171', '2023-10-03 07:04:10', NULL, NULL),
+(11, 'Mahendra', 'qs', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at nunc sed lectus eleifend interdum at eget mauris. Nullam imperdiet tortor vitae nisl sagittis, eu placerat lorem tristique. ', '628983627088', '2023-10-03 07:05:32', '1', 'mahendra'),
+(12, 'Imam Maskuri', 'Gresik', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at nunc sed lectus eleifend interdum at eget mauris. Nullam imperdiet tortor vitae nisl sagittis, eu placerat lorem tristique. ', '62895395170139', '2023-12-18 11:13:35', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -171,7 +172,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `pesanan`
 --
 ALTER TABLE `pesanan`
-  MODIFY `idPesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `idPesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `product`
@@ -199,4 +200,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-

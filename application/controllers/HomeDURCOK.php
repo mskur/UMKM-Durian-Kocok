@@ -17,24 +17,27 @@ class HomeDURCOK extends CI_Controller {
 	public function homeDurianKocok()
 	{
 		$getAllProduct = $this->modelProduct->getAllProduct();
-        $getContact = $this->modelContact->getContactbyID(1);
+	    $getContact = $this->modelContact->getContactbyID(1);
+	    $getAllPesanan = $this->modelPesanan->getAllPesanan();
 
         $data = array(
-            'title' => 'Home',
-            'getAllProduct' => $getAllProduct,
-            'countProduct' => count($getAllProduct),
-            'getContact' => $getContact
-        );
+		'title' => 'Home',
+		'getAllProduct' => $getAllProduct,
+		'countProduct' => count($getAllProduct),
+		'getContact' => $getContact
+		);
+
 		$this->load->view('Home/viewHome', $data);
 	}
 
 	public function productDurianKocok()
 	{
 		$getAllProduct = $this->modelProduct->getAllProduct();
-
+		$allContact = $this->modelContact->getContactbyID(1);
 		$data = array(
 			'title' => 'Product',
-			'getAllProduct' => $getAllProduct
+			'getAllProduct' => $getAllProduct,
+			'contact' => $allContact
 		);
 		$this->load->view('Home/viewProduct', $data);
 	}
@@ -42,17 +45,24 @@ class HomeDURCOK extends CI_Controller {
 	public function detailProduct($idProduct)
 	{
 		$getProductbyID = $this->modelProduct->getProductbyID($idProduct);
-
+		$allContact = $this->modelContact->getContactbyID(1);
 		$data = array(
 			'title' => 'Detail Product',
-			'produk' => $getProductbyID
+			'produk' => $getProductbyID,
+			'contact' => $allContact
 		);
 		$this->load->view('Home/detailProduct', $data);
 	}
 
 	public function aboutDurianKocok()
 	{
-		$this->load->view('Home/viewAbout');
+		$allContact = $this->modelContact->getContactbyID(1);
+
+		$data = array(
+			'title' => 'About Owner',
+			'contact' => $allContact
+		);
+		$this->load->view('Home/viewAbout', $data);
 	}
 
 	public function contactDurianKocok()
@@ -133,7 +143,7 @@ class HomeDURCOK extends CI_Controller {
 			$data = $this->security->xss_clean($data);
 			$this->modelPesanan->addPesanan($data);
 			$this->session->set_flashdata('notification', 'Pemesanan berhasil');
-			redirect('pemesanan');
+			redirect('contact');
 		}
 	}
 
